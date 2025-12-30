@@ -51,7 +51,6 @@
               <th>Check Out</th>
               <th>Working Hours</th>
               <th>Status</th>
-              <th>Notes</th>
             </tr>
           </thead>
           <tbody>
@@ -75,7 +74,6 @@
                   {{ record.status }}
                 </span>
               </td>
-              <td>{{ record.notes || "-" }}</td>
             </tr>
           </tbody>
         </table>
@@ -121,6 +119,7 @@
             <div class="stat-label">Total Days</div>
           </div>
         </div>
+        
       </div>
     </div>
   </div>

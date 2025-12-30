@@ -47,10 +47,10 @@
         <p>Demo Accounts:</p>
         <div class="demo-accounts">
           <div class="demo-account">
-            <strong>Admin:</strong> admin@absensi.com / password
+            <strong>Admin:</strong> admin@gmail.com / password
           </div>
           <div class="demo-account">
-            <strong>Employee:</strong> john@company.com / password
+            <strong>Employee:</strong> ayu@gmail.com / password
           </div>
         </div>
       </div>

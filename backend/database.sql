@@ -34,7 +34,6 @@ CREATE TABLE attendances (
   check_in DATETIME NOT NULL,
   check_out DATETIME NULL,
   status ENUM('present', 'late', 'absent') DEFAULT 'present',
-  notes TEXT NULL,
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE

@@ -46,7 +46,7 @@
               <td>{{ employee.email }}</td>
               <td>{{ employee.position }}</td>
               <td>{{ employee.department }}</td>
-              <td>${{ formatSalary(employee.salary) }}</td>
+              <td>Rp {{ formatSalary(employee.salary) }}</td>
               <td>{{ formatDate(employee.hire_date) }}</td>
               <td>
                 <div class="action-buttons">

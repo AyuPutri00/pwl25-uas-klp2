@@ -39,7 +39,6 @@ CREATE TABLE attendances (
   check_in DATETIME NOT NULL,
   check_out DATETIME NULL,
   status ENUM('present', 'late', 'absent') DEFAULT 'present',
-  notes TEXT NULL,
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
@@ -47,12 +46,11 @@ CREATE TABLE attendances (
 
 -- Insert data admin (password: password)
 INSERT INTO users (name, email, password, role) VALUES 
-('Admin', 'admin@absensi.com', '$2a$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'admin');
+('Admin', 'admin@gmail.com', '$2a$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'admin');
 
 -- Insert data employee sample (password: password)
 INSERT INTO users (name, email, password, role) VALUES 
-('John Doe', 'john@company.com', '$2a$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'employee'),
-('Jane Smith', 'jane@company.com', '$2a$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'employee');
+('Ayu Putri', 'ayu@gmail.com', '$2a$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'employee'),
 
 -- Insert data employee profile
 INSERT INTO employees (user_id, employee_id, position, department, salary, hire_date) VALUES 

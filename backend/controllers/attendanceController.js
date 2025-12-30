@@ -156,7 +156,7 @@ const attendanceController = {
   // Mark employee as absent (admin only)
   async markAbsent(req, res, next) {
     try {
-      const { user_id, date, reason } = req.body;
+      const { user_id, date } = req.body;
 
       if (!user_id || !date) {
         return res.status(400).json({
@@ -165,12 +165,26 @@ const attendanceController = {
         });
       }
 
-      const attendanceId = await Attendance.markAbsent(user_id, date, reason);
+      const attendanceId = await Attendance.markAbsent(user_id, date);
 
       res.status(201).json({
         success: true,
         message: "Employee marked as absent",
         data: { attendance_id: attendanceId },
+      });
+    } catch (error) {
+      next(error);
+    }
+  },
+
+  // Get work configuration
+  async getWorkConfig(req, res, next) {
+    try {
+      const config = Attendance.getWorkConfig();
+      
+      res.json({
+        success: true,
+        data: { config }
       });
     } catch (error) {
       next(error);

@@ -9,6 +9,7 @@ router.post('/checkout', authenticateToken, attendanceController.checkOut);
 router.get('/today', authenticateToken, attendanceController.getTodayAttendance);
 router.get('/my-attendance', authenticateToken, attendanceController.getUserAttendance);
 router.get('/my-stats', authenticateToken, attendanceController.getAttendanceStats);
+router.get('/work-config', attendanceController.getWorkConfig); // Public endpoint for work configuration
 
 // Admin routes
 router.get('/all', 
